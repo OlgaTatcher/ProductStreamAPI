@@ -29,7 +29,7 @@ public class Product {
         this.price = price;
     }
 
-    public boolean isDiscount() {
+    public boolean withDiscount() {
         return discount;
     }
 
@@ -43,5 +43,10 @@ public class Product {
 
     public void setDateAdded(LocalDate dateAdded) {
         this.dateAdded = dateAdded;
+    }
+    public  static int compare(Product p1,Product p2){
+        if(p1.getPrice()>p2.getPrice())
+            return 1;
+        return -1;
     }
 }
